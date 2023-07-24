@@ -29,6 +29,10 @@ For a comprehensive understanding, refer to our article titled "Achievable Minim
 
 Initiate the Flask application and visit `http://localhost:5000` on your browser. Engage with the BFSAMCC XAI tool, provide your data, and receive precise model-agnostic explanations.
 
+### Note on Timing
+When evaluating the `BFS_AMCC` algorithm's efficiency, note that the recorded time pertains solely to our method. While we use the anchor algorithm to identify key anchors, its execution time isn't reflected in the `BFS_AMCC` timings.
+Our primary interest is how quickly `BFS_AMCC` can modify a prediction based on parameters like ignore indices, specific indices, and transition rules. If you're using your own machine learning model without the anchor algorithm, ensure you provide the essential input arguments for our algorithm to operate effectively.
+
 ## Feedback & Collaboration
 
 Discover any anomalies or areas of improvement? Raise an issue in the repository. We are open to collaborations and value contributions. For proposals or fixes, initiate a pull request or open a descriptive issue.
