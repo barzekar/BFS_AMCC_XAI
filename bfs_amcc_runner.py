@@ -1,5 +1,5 @@
-from model.dataset_loader import DatasetLoader
-from model.ml_model import ML_Model
+from ml_model.dataset_loader import DatasetLoader
+from ml_model.ml_model import ML_Model
 from amcc.bfs_amcc_modifier import BFSAMCCModifier
 from utils.timing import Timeout
 import numpy as np
