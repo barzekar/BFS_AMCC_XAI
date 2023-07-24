@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BFS Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+    <h1>BFS AMCC Results</h1>
+    <div class="alert alert-success">
+        <p>{{ data }}</p>
+    </div>
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Go back</a>
+</body>
+</html>

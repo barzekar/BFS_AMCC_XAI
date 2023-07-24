@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFS AMCC Application</title>
+    <!-- Include Bootstrap for styling -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+    <h2>BFS AMCC Interface</h2>
+
+    <form action="run" method="post" id="run">
+      <div class="form-group">
+        <label for="ignore_indices">Ignore Indices:</label>
+        <input type="text" name="ignore_indices" class="form-control" placeholder="Ignore Indices" id="ignore_indices" value="{% for idx in data.ignore_indices %}{{ idx }}{% if not loop.last %}, {% endif %}{% endfor %}">
+      </div>
+      <div class="form-group">
+        <label for="data_path">Data path:</label>
+        <input type="text" name="data_path" class="form-control" placeholder="Data path" id="data_path" value="{{ data.data_path }}">
+      </div>
+      <div class="form-group">
+        <label for="thresh_prob">Threshold probability:</label>
+        <input type="text" name="thresh_prob" class="form-control" placeholder="Threshold probability" id="thresh_prob" value="{{ data.thresh_prob }}">
+      </div>
+      <div class="form-group">
+        <label for="output_file">Output path:</label>
+        <input type="text" name="output_file" class="form-control" placeholder="Output path" id="output_file" value="{{ data.output_file }}">
+      </div>
+      <button type="submit" class="btn btn-primary mt-2 mb-3">Run BFS AMCC</button>
+    </form>
+
+    <div id="spinner" style="display: none">
+        Loading...
+    </div>
+
+    <div class="alert alert-info" id="infoMessage" role="alert">
+        Press the button above to run the BFS AMCC.
+    </div>
+    <div id="output" class="mt-3"></div>
+
+    <!-- jQuery and Popper.js for Bootstrap functionality -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Include the custom JavaScript -->
+    <script src="/static/main_amcc.js"></script>
+</body>
+</html>
