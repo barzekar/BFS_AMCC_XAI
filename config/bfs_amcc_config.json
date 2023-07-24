@@ -1,0 +1,16 @@
+{
+    "data_path": "/hmeq_categorical.csv",
+    "target_idx": 0,
+    "delimiter": ",",
+    "feature_names": ["BAD", "LOAN", "MORTDUE", "VALUE", "REASON", "JOB",
+      "YOJ", "DEROG", "DELINQ", "CLAGE", "NINQ", "CLNO", "DEBTINC"],
+    "ignore_indices": [4,5,6,7,9],
+    "thresh_prob": 0.95,
+    "transition_rules": {
+        "MORTDUE": "old >= new",
+        "DELINQ": "old >= new",
+        "NINQ": "old >= new",
+        "DEBTINC": "old >= new"
+    },
+    "output_file": "amcc_output.csv"
+}
