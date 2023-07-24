@@ -39,6 +39,6 @@ Special appreciation to the pioneers of the anchor-based explanation method for 
 
 ## Citation
 
-If our repository aids your research or project, please reference our work. The citation details can be found [HERE](https://scholar.googleusercontent.com/scholar.bib?q=info:EI5epotxRkoJ:scholar.google.com/&output=citation&scisdr=ChVzANBVEKC1nx6I-ak:ABFrs3wAAAAAZL2O4alf9w3V_ACLEWfQ8oRkR6A&scisig=ABFrs3wAAAAAZL2O4dbEBlVN1EebJflllGexaDs&scisf=4&ct=citation&cd=-1&hl=en):
+If our repository aids your research or project, please reference our work. The citation details can be found [HERE](https://scholar.googleusercontent.com/scholar.bib?q=info:EI5epotxRkoJ:scholar.google.com/&output=citation&scisdr=ChVzANBVEJ-UnBsKmpA:ABFrs3wAAAAAZL4MgpApTYyi3_T8hkqJgJrMzPM&scisig=ABFrs3wAAAAAZL4Mglx6tjYH3FiO0BpsYp1kJEw&scisf=4&ct=citation&cd=-1&hl=en):
 
 
