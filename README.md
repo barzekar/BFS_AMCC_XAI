@@ -36,8 +36,18 @@ Discover any anomalies or areas of improvement? Raise an issue in the repository
 ## Acknowledgments
 We acknowledge the authors of **Anchors: High-Precision Model-Agnostic Explanations** for their contributions in the field of anchor-based explanations. Their work has been foundational for our research. For further details, refer to their [repository](https://github.com/marcotcr/anchor).
 
+
+
 ## Citation
 
-If our repository aids your research or project, please reference our work. The citation details can be found [HERE](https://scholar.googleusercontent.com/scholar.bib?q=info:EI5epotxRkoJ:scholar.google.com/&output=citation&scisdr=ChVzANBVEJ-UnBsKmpA:ABFrs3wAAAAAZL4MgpApTYyi3_T8hkqJgJrMzPM&scisig=ABFrs3wAAAAAZL4Mglx6tjYH3FiO0BpsYp1kJEw&scisf=4&ct=citation&cd=-1&hl=en):
+If our repository aids your research or project, kindly reference our work using the following citation:
+
+```bash
+@article{barzekar2023achievable,
+  title={Achievable Minimally Contrastive Counterfactual Explanations},
+  author={Barzekar, Hosein and McRoy, Susan},
+  year={2023},
+  publisher={Preprints}
+}
 
 
