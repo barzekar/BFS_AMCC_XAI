@@ -34,8 +34,7 @@ Initiate the Flask application and visit `http://localhost:5000` on your browser
 Discover any anomalies or areas of improvement? Raise an issue in the repository. We are open to collaborations and value contributions. For proposals or fixes, initiate a pull request or open a descriptive issue.
 
 ## Acknowledgments
-
-Special appreciation to the pioneers of the anchor-based explanation method for tabular data. Their groundbreaking work, **Anchors: High-Precision Model-Agnostic Explanations**, has been instrumental in our research. Delve into their detailed [repository](https://github.com/marcotcr/anchor) for more insights.
+We acknowledge the authors of **Anchors: High-Precision Model-Agnostic Explanations** for their contributions in the field of anchor-based explanations. Their work has been foundational for our research. For further details, refer to their [repository](https://github.com/marcotcr/anchor).
 
 ## Citation
 
