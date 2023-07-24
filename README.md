@@ -40,7 +40,7 @@ We acknowledge the authors of **Anchors: High-Precision Model-Agnostic Explanati
 
 ## Citation
 
-If our repository aids your research or project, kindly reference our work using the following citation:
+Should you find this repository beneficial to your research or endeavors, please consider citing us with the provided reference:
 
 ```bash
 @article{barzekar2023achievable,
@@ -49,5 +49,6 @@ If our repository aids your research or project, kindly reference our work using
   year={2023},
   publisher={Preprints}
 }
+
 
 
