@@ -2,6 +2,6 @@ numpy
 pandas
 lime
 anchor-exp
-sklearn
+scikit-learn
 flask
 ipython
