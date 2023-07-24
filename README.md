@@ -33,6 +33,35 @@ Initiate the Flask application and visit `http://localhost:5000` on your browser
 When evaluating the `BFS_AMCC` algorithm's efficiency, note that the recorded time pertains solely to our method. While we use the anchor algorithm to identify key anchors, its execution time isn't reflected in the `BFS_AMCC` timings.
 Our primary interest is how quickly `BFS_AMCC` can modify a prediction based on parameters like ignore indices, specific indices, and transition rules. If you're using your own machine learning model without the anchor algorithm, ensure you provide the essential input arguments for our algorithm to operate effectively.
 
+
+
+## Docker Deployment
+
+For those who prefer using Docker for deployment, we provide a Dockerfile for building a Docker image of the application.
+
+### Prerequisites
+- Ensure you have Docker installed on your machine. If not, you can get it from [Docker's official website](https://www.docker.com/get-started).
+
+### Building the Docker Image
+To build a Docker image of the application, navigate to the root directory of the project (where the `Dockerfile` is located) and run:
+
+```bash
+docker build -t yourdockername .
+```
+
+This will create a Docker image named "yourdockername".
+
+### Running the Application Using Docker
+Once the image is built, you can run the application using the following command:
+
+```bash
+docker run -p 5000:5000 yourdockername
+```
+This command maps port 5000 in the container to port 5000 on your host machine, allowing you to access the application at `http://localhost:5000`.
+
+
+
+
 ## Feedback & Collaboration
 
 Discover any anomalies or areas of improvement? Raise an issue in the repository. We are open to collaborations and value contributions. For proposals or fixes, initiate a pull request or open a descriptive issue.
