@@ -11,6 +11,22 @@ log = Logger()
 
 
 def parse_transition_rules(transition_rules, feature_names):
+    """
+    Parses transition rules from a given dictionary and maps feature names to their corresponding indices.
+
+    Parameters:
+    ----------
+    transition_rules : dict
+        Dictionary containing transition rules for specific features.
+    feature_names : list
+        List of feature names in the dataset.
+
+    Returns:
+    -------
+    dict
+        A dictionary where keys are feature indices and values are lambda functions representing
+        the respective transition rules.
+    """
     rules = {}
     for feature, rule in transition_rules.items():
         if "old" in rule and "new" in rule:  # basic validation
@@ -24,6 +40,25 @@ def parse_transition_rules(transition_rules, feature_names):
 
 # @time_it
 def run_bfs_amcc(config):
+    """
+        Runs the Breadth-First Search process based on "Achievable Minimally Contrastive Counterfactual Explanations"
+        on instances labeled suboptimal. The goal is to modify these instances in a way that changes their prediction
+        from a negative (BAD) classification to a positive (GOOD) one.
+
+        Parameters:
+        ----------
+        config : dict
+            Configuration dictionary containing parameters and paths related to the dataset,
+            machine learning model, and the counterfactual explanation process.
+
+        Returns:
+        -------
+        dict
+            A dictionary containing:
+            - 'metrics': A dictionary with results of the process (success, failure, time taken, etc.).
+            - 'messages': A list of log messages generated during the process.
+    """
+
     dataset_loader = DatasetLoader(config["data_path"], config["target_idx"], delimiter=config["delimiter"],
                                    feature_names=config["feature_names"])
     predictor = ML_Model(dataset_loader.dataset)
@@ -102,7 +137,7 @@ def run_bfs_amcc(config):
                 metrics["modified_instances"].append(None)
                 metrics["changes"].append(None)
             counter += 1
-            if counter == 5:
+            if counter == 2:
                 break
 
     metrics["modified_instances"] = [instance.tolist() if instance is not None else None for instance in
