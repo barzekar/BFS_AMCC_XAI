@@ -3,8 +3,9 @@
 
 ## Overview
 
-Decision support systems grounded on machine learning models have increasingly become essential in deciphering complex datasets. While existing model-agnostic explanation models highlight influential factors underpinning predictions, they often fall short in providing actionable insights for more favorable outcomes. Addressing this, our novel method offers specific, feasible changes impacting the predictions of intricate black-box AI models for specific instances. Additionally, our method introduces high-precision explanations, applying secondary techniques to identify minimally contrastive yet maximally probable high-precision counterfactual explanations. By focusing on achievable contrasted features, we ensure real-time utility, positioning our approach as ideal for systems demanding immediate responses.
-For a comprehensive understanding, refer to our article titled "Achievable Minimally Contrastive Counterfactual Explanations", which delves deep into our method's mechanics and its suitability for real-time applications.
+Decision support systems, anchored in machine learning models, have emerged as vital tools for dissecting complex tabular datasets. Existing model-agnostic explanation models excel in elucidating influential factors driving predictions. However, they often don't bridge the gap to offer actionable insights towards desired outcomes. Our method steps in here, proposing precise, actionable changes tailored to influence predictions of intricate black-box AI models for specific instances.
+
+This method is twofold: Initially, we utilize the high-precision explanations from "Anchors". Subsequently, we deploy a technique to derive achievable minimally contrastive counterfactual explanations (AMCC), within the realm of domain-specific constraints. A significant advantage lies in the flexibility our approach affords: researchers can skip the first step, plugging in their machine learning models directly into our AMCC framework, making our method both adaptable and efficient. The focus on achievable contrasting features ensures our model's relevance in real-time applications, ideal for systems where immediate responses are paramount.
 
 ## Setup
 
