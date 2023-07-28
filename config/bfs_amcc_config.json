@@ -1,5 +1,5 @@
 {
-    "data_path": "/hmeq_categorical.csv",
+    "data_path": "data/hmeq_categorical.csv",
     "target_idx": 0,
     "delimiter": ",",
     "feature_names": ["BAD", "LOAN", "MORTDUE", "VALUE", "REASON", "JOB",
