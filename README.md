@@ -27,9 +27,8 @@ This method is twofold: Initially, we utilize the high-precision explanations fr
 
 
 ## Usage
-
-Initiate the Flask application and visit `http://localhost:5000` on your browser. Engage with the BFSAMCC XAI tool, provide your data, and receive precise model-agnostic explanations.
-
+Initiate the Flask application and visit `http://localhost:5000` on your browser. 
+Engage with the BFS-AMCC interface, input your data, and receive actionable suggestions towards favorable outcomes.
 ### Note on Timing
 When evaluating the `BFS_AMCC` algorithm's efficiency, note that the recorded time pertains solely to our method. While we use the anchor algorithm to identify key anchors, its execution time isn't reflected in the `BFS_AMCC` timings.
 Our primary interest is how quickly `BFS_AMCC` can modify a prediction based on parameters like ignore indices, specific indices, and transition rules. If you're using your own machine learning model without the anchor algorithm, ensure you provide the essential input arguments for our algorithm to operate effectively.
