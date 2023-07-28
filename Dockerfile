@@ -11,8 +11,6 @@ COPY . .
 # Cleaning up cache to reduce layer size
 RUN pip install -r requirements.txt && rm -rf /root/.cache
 
-# Document the port your app listens on
-# EXPOSE 5000
+# Default command to run the main script
+CMD ["python", "main.py"]
 
-# Default command to run
-CMD ["python", "app.py"]

@@ -52,14 +52,14 @@ docker build -t yourdockername .
 
 This will create a Docker image named "yourdockername".
 
-### Running the Application Using Docker
+#### Running the Application Using Docker
 Once the image is built, you can run the application using the following command:
 
 ```bash
-docker run -p 5000:5000 yourdockername
+docker run yourdockername
 ```
-This command maps port 5000 in the container to port 5000 on your host machine, allowing you to access the application at `http://localhost:5000`.
 
+This will execute your main script inside the container, and you should see the printed metrics as output.
 
 
 
