@@ -27,14 +27,21 @@ def parse_transition_rules(transition_rules, feature_names):
         A dictionary where keys are feature indices and values are lambda functions representing
         the respective transition rules.
     """
+    condition_map = {
+        "old >= new": lambda old, new: old >= new,
+        "old <= new": lambda old, new: old <= new,
+        "old == new": lambda old, new: old == new,
+        "old != new": lambda old, new: old != new,
+        "old > new": lambda old, new: old > new,
+        "old < new": lambda old, new: old < new
+    }
+
     rules = {}
     for feature, rule in transition_rules.items():
-        if "old" in rule and "new" in rule:  # basic validation
+        if rule in condition_map:
             idx = feature_names.index(feature)
-            if rule == "old >= new":
-                rules[idx] = lambda old, new, feature=feature: old >= new
-            elif rule == "old <= new":
-                rules[idx] = lambda old, new, feature=feature: old <= new
+            rules[idx] = condition_map[rule]
+
     return rules
 
 
@@ -137,7 +144,7 @@ def run_bfs_amcc(config):
                 metrics["modified_instances"].append(None)
                 metrics["changes"].append(None)
             counter += 1
-            if counter == 2:
+            if counter == 1:
                 break
 
     metrics["modified_instances"] = [instance.tolist() if instance is not None else None for instance in
