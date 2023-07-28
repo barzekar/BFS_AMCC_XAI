@@ -1,15 +1,13 @@
-
 import json
 from bfs_amcc_runner import run_bfs_amcc
 
-def load_config():
 
+def load_config():
     with open("config/bfs_amcc_config.json", "r") as file:
         return json.load(file)
 
 
 def main():
-
     config = load_config()
     config["data_path"] = "data/" + config["data_path"]
     metrics = run_bfs_amcc(config)
