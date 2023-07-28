@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BFS AMCC Application</title>
+    <title>BFS-AMCC Application</title>
     <!-- Include Bootstrap for styling -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="container mt-5">
-    <h2>BFS AMCC Interface</h2>
+    <h2>BFS-AMCC Interface</h2>
 
     <form action="run" method="post" id="run">
       <div class="form-group">
@@ -27,7 +27,7 @@
         <label for="output_file">Output path:</label>
         <input type="text" name="output_file" class="form-control" placeholder="Output path" id="output_file" value="{{ data.output_file }}">
       </div>
-      <button type="submit" class="btn btn-primary mt-2 mb-3">Run BFS AMCC</button>
+      <button type="submit" class="btn btn-primary mt-2 mb-3">Run BFS-AMCC</button>
     </form>
 
     <div id="spinner" style="display: none">
@@ -35,7 +35,7 @@
     </div>
 
     <div class="alert alert-info" id="infoMessage" role="alert">
-        Press the button above to run the BFS AMCC.
+        Press the button above to run the BFS-AMCC.
     </div>
     <div id="output" class="mt-3"></div>
 

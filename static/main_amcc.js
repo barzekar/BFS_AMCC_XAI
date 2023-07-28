@@ -9,10 +9,10 @@ function logMessage(message, isError) {
     }
 }
 
-// Main function to run BFS AMCC when the button is clicked
+// Main function to run BFS-AMCC when the button is clicked
 function runBFS(event) {
     event.preventDefault();
-    logMessage("Running BFS AMCC... Please wait.");
+    logMessage("Running BFS-AMCC... Please wait.");
     $("#spinner").show();
 
      var formData = {};
@@ -28,7 +28,7 @@ function runBFS(event) {
         success: function (data) {
             $("#spinner").hide();
             if (data.status === "success") {
-                logMessage("BFS processing was successful!");
+                logMessage("Processing was successful!");
 
                 if (data.messages && data.messages.length > 0) {
                     data.messages.forEach(function (msg) {

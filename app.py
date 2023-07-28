@@ -45,7 +45,7 @@ def worker(config, return_dict):
         result = run_bfs_amcc(config)
         return_dict['result'] = result
     except Exception as e:
-        app.logger.error(f"Error processing BFS AMCC: {e}", exc_info=True)
+        app.logger.error(f"Error processing BFS-AMCC: {e}", exc_info=True)
         return_dict['error'] = str(e)
 
 
@@ -65,9 +65,9 @@ def run_amcc():
         if p.is_alive():
             p.terminate()
             p.join()
-            app.logger.warning("BFS processing timed out!")
+            app.logger.warning("Processing timed out!")
             return jsonify(status='fail',
-                           message="BFS processing is taking longer than expected. Please try again later.")
+                           message="Processing is taking longer than expected. Please try again later.")
 
         if 'error' in return_dict:
             return jsonify(status='fail', message=return_dict['error'])
@@ -77,7 +77,7 @@ def run_amcc():
         if results:
             return jsonify(status='success', messages=results["messages"], metrics=results["metrics"])
         else:
-            return jsonify(status='fail', message="BFS processing failed!")
+            return jsonify(status='fail', message="Processing failed!")
 
     except ValueError as ve:
         return jsonify(status='fail', message=str(ve))
