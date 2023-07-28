@@ -9,7 +9,7 @@ def load_config():
 
 def main():
     config = load_config()
-    config["data_path"] = "data/" + config["data_path"]
+    config["data_path"] = config["data_path"]
     metrics = run_bfs_amcc(config)
     print(metrics)
 
