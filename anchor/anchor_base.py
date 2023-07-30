@@ -222,8 +222,7 @@ class AnchorBaseBeam(object):
     @staticmethod
     def get_anchor_from_tuple(t, state):
         # TODO: This is wrong, some of the intermediate anchors may not exist.
-        anchor = {'feature': [], 'mean': [], 'precision': [],
-                  'coverage': [], 'examples': [], 'all_precision': 0}
+        anchor = dict(feature=[], mean=[], precision=[], coverage=[], examples=[], all_precision=0)
         anchor['num_preds'] = state['data'].shape[0]
         normalize_tuple = lambda x: tuple(sorted(set(x)))  # noqa
         current_t = tuple()
