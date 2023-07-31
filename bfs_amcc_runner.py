@@ -98,7 +98,7 @@ def run_bfs_amcc(config):
     messages = []  # For collecting logs to send to frontend
 
     suboptimal_indices = np.where(dataset_loader.dataset.labels_test == 1)[0]
-    counter = 0
+
     for instance_index in suboptimal_indices:
         original_instance = dataset_loader.dataset.test[instance_index]
         original_prediction = predictor.classifier.predict(original_instance.reshape(1, -1))[0]
@@ -143,9 +143,6 @@ def run_bfs_amcc(config):
                 messages.append(failure_message)
                 metrics["modified_instances"].append(None)
                 metrics["changes"].append(None)
-            counter += 1
-            if counter == 1:
-                break
 
     metrics["modified_instances"] = [instance.tolist() if instance is not None else None for instance in
                                      metrics["modified_instances"]]
