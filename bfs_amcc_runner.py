@@ -103,7 +103,7 @@ def run_bfs_amcc(config):
         original_instance = dataset_loader.dataset.test[instance_index]
         original_prediction = predictor.classifier.predict(original_instance.reshape(1, -1))[0]
 
-        if dataset_loader.dataset.labels_test[instance_index] == original_prediction == 1:
+        if original_prediction == 1:
             exp = explainer.explain_instance(original_instance, predictor.classifier.predict,
                                              threshold=config["thresh_prob"])
             feature_indices = BFSAMCCModifier.extract_features(" AND ".join(exp.names()))
