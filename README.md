@@ -1,4 +1,4 @@
-# [Achievable Minimally Contrastive Counterfactual Explanations](https://www.preprints.org/manuscript/202307.0786/v1)
+# [Achievable Minimally-Contrastive Counterfactual Explanations](https://www.mdpi.com/2504-4990/5/3/48)
 
 
 ## Overview
