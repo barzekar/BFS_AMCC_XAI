@@ -3,14 +3,12 @@ import json
 import logging
 import multiprocessing
 from flask import Flask, render_template, request, jsonify
-
 from logger import Logger
 from bfs_amcc_runner import run_bfs_amcc
 
 app = Flask(__name__)
 app.logger.setLevel(logging.INFO)
 
-MAX_PROCESSING_TIME = 240  # 4 minutes
 log = Logger()
 
 
@@ -60,14 +58,7 @@ def run_amcc():
 
         p = multiprocessing.Process(target=worker, args=(config, return_dict))
         p.start()
-        p.join(MAX_PROCESSING_TIME)
-
-        if p.is_alive():
-            p.terminate()
-            p.join()
-            app.logger.warning("Processing timed out!")
-            return jsonify(status='fail',
-                           message="Processing is taking longer than expected. Please try again later.")
+        p.join()
 
         if 'error' in return_dict:
             return jsonify(status='fail', message=return_dict['error'])
@@ -127,7 +118,6 @@ def extract_int_list(body, key):
         return [int(idx.strip()) for idx in indices_str if idx.strip()]
     except ValueError:
         raise ValueError(f"{key} must be a comma-separated list of integers")
-
 
 def load_config(config_path):
     try:
