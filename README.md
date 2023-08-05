@@ -81,13 +81,8 @@ Should you find this repository beneficial to your research or endeavors, please
   AUTHOR = {Barzekar, Hosein and McRoy, Susan},
   TITLE = {Achievable Minimally-Contrastive Counterfactual Explanations},
   JOURNAL = {Machine Learning and Knowledge Extraction},
-  VOLUME = {5},
-  YEAR = {2023},
-  NUMBER = {3},
-  PAGES = {922--936},
-  URL = {https://www.mdpi.com/2504-4990/5/3/48},
-  ISSN = {2504-4990},
-  DOI = {10.3390/make5030048}
+  VOLUME = {5}, YEAR = {2023}, NUMBER = {3}, PAGES = {922--936},
+  URL = {https://www.mdpi.com/2504-4990/5/3/48}, ISSN = {2504-4990}, DOI = {10.3390/make5030048}
 }
 ```
 
