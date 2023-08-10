@@ -29,7 +29,7 @@ def load_csv_dataset(data, target_idx, delimiter=',',
                      feature_names=None, categorical_features=None,
                      features_to_use=None, feature_transformations=None,
                      test_size=.2,
-                     discretize=False, balance=False, fill_na='-1', filter_fn=None, skip_first=False):
+                     discretize=False, balance=False, fill_na='-1', filter_fn=None, skip_first=True):
     """if not feature names, takes 1st line as feature names
     if not features_to_use, use all except for target
     if not categorical_features, consider everything < 20 as categorical"""
