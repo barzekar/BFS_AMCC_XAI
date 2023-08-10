@@ -73,7 +73,8 @@ def run_bfs_amcc(config):
         dataset_loader.dataset.class_names,
         dataset_loader.dataset.feature_names,
         dataset_loader.dataset.train,
-        dataset_loader.dataset.categorical_names)
+        dataset_loader.dataset.categorical_names,
+    beam_size=config["beam_size"])
 
     # If transition_rules parameter is None, try to parse it from the config
     feature_names = config["feature_names"]

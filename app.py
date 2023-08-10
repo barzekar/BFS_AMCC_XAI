@@ -20,6 +20,7 @@ def index():
             "ignore_indices": config["ignore_indices"],
             "data_path": config["data_path"],
             "thresh_prob": config["thresh_prob"],
+            "beam_size": config["beam_size"],
             "output_file": config["output_file"]
         }
         return render_template('index.html', data=data)
@@ -95,6 +96,9 @@ def validate_and_extract_config(body):
     # Extract and validate threshold probability
     config["thresh_prob"] = extract_float(body, "thresh_prob")
 
+    # Extract and validate beam size
+    config["beam_size"] = extract_int(body, "beam_size")
+
     # Extract and validate ignore indices
     config["ignore_indices"] = extract_int_list(body, "ignore_indices")
 
@@ -110,6 +114,18 @@ def extract_float(body, key):
             raise ValueError(f"{key} must be between 0 and 1.")
     except ValueError:
         raise ValueError(f"Invalid value provided for {key}")
+
+
+def extract_int(body, key):
+    try:
+        value = int(body.get(key, "").strip())
+        if value > 0:
+            return value
+        else:
+            raise ValueError(f"{key} must be greater than 0.")
+    except ValueError:
+        raise ValueError(f"Invalid value provided for {key}")
+
 
 
 def extract_int_list(body, key):

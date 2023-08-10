@@ -2,6 +2,7 @@
     "data_path": "data/hmeq_categorical.csv",
     "target_idx": 0,
     "delimiter": ",",
+    "beam_size": 1,
     "feature_names": ["BAD", "LOAN", "MORTDUE", "VALUE", "REASON", "JOB",
       "YOJ", "DEROG", "DELINQ", "CLAGE", "NINQ", "CLNO", "DEBTINC"],
     "ignore_indices": [4,5,6,7,9],

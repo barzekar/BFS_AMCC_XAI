@@ -29,7 +29,7 @@ class AnchorTabularExplainer(object):
             this map will be considered as ordinal or continuous, and thus discretized.
     """
     def __init__(self, class_names, feature_names, train_data,
-                 categorical_names={}, discretizer='quartile', encoder_fn=None):
+                 categorical_names={}, discretizer='quartile', encoder_fn=None, beam_size=1):
         self.min = {}
         self.max = {}
         self.disc = collections.namedtuple('random_name2',
@@ -41,6 +41,7 @@ class AnchorTabularExplainer(object):
         self.feature_names = feature_names
         self.train = train_data
         self.class_names = class_names
+        self.beam_size = beam_size
         self.categorical_names = copy.deepcopy(categorical_names)
         if categorical_names:
             self.categorical_features = sorted(categorical_names.keys())
@@ -278,6 +279,7 @@ class AnchorTabularExplainer(object):
         exp = anchor_base.AnchorBaseBeam.anchor_beam(
             sample_fn, delta=delta, epsilon=tau, batch_size=batch_size,
             desired_confidence=threshold, max_anchor_size=max_anchor_size,
+            beam_size=self.beam_size,
             **kwargs)
         self.add_names_to_exp(data_row, exp, mapping)
         exp['instance'] = data_row
